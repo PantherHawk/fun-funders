@@ -17,7 +17,9 @@ FROM ATTORNEYS AS a, CASES AS c
 WHERE c.attorney_id = a.id;
 
 -- 5) For every case, return the total amount funded.
--- Clarifying question, is total amount funded defined in the Fundings table as "advance_amount"? If so the following query works.
+
+-- Clarifying question, is total amount funded defined in the
+-- Fundings table as "advance_amount"? If so the following query works.
 SELECT f.advance_amount
 FROM FUNDINGS AS f, CASES AS c
 WHERE f.case_id = c.id;
@@ -31,3 +33,17 @@ WHERE a.full_name="Sal Goodman";
 SELECT type
 FROM CASE_TYPE
 ORDER BY type;
+
+-- 8) Return all case types with the name of the case type and the number of cases of
+-- that type, each in its own row, without duplicates.
+-- case-type | # case-types
+SELECT cases.type, COUNT(cases.case_type_id) AS num_of_cases
+FROM CASE_TYPE ct LEFT JOIN CASES ON (cases.case_type_id=ct.id)
+GROUP BY cases.case_type_id;
+
+-- 9) Rank the case types by the most frequent (most number of cases) to the least
+--frequent with the number of cases of each type.
+SELECT cases.type, COUNT(cases.case_type_id) AS num_of_cases
+FROM CASE_TYPE ct LEFT JOIN CASES ON (cases.case_type_id=ct.id)
+GROUP BY cases.case_type_id
+ORDER BY num_of_cases DESC;
