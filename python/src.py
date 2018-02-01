@@ -11,7 +11,8 @@ def cleanSSN( str ):
      # slice first nine numbers
      str = str[:9]
     # reformat by taking slice of first three numbers (0, 3), slice of next two (3, 5), and the last four (5)
-    print(f'{str[:3]}-{str[3:5]}-{str[5:]}')
-    return;
+    result = str[:3]+'-'+str[3:5]+'-'+str[5:]
+    print(result)
+    return result;
 
 # test cleanSSN(str = '5wiohghj67890iugg')
