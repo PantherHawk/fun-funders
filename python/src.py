@@ -1,8 +1,7 @@
 # clean SSN
 import re
 
-def cleanSSN():
-    str = raw_input('Enter your SSN here: ')
+def cleanSSN(str = raw_input('Enter your SSN here: ')):
     # remove dashes and non-numbers
     print(str)
     str = re.sub("[^0-9]", "", str)
