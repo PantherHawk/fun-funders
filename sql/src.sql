@@ -21,6 +21,7 @@ FROM
 
 -- 4) For every case, return the attorney’s phone number and email.
 SELECT
+  c.id,
   a.phone_number,
   a.email
 FROM
