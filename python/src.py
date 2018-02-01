@@ -1,7 +1,10 @@
 # clean SSN
 import re
-def cleanSSN( str ):
+
+def cleanSSN():
+    str = raw_input('Enter your SSN here: ')
     # remove dashes and non-numbers
+    print(str)
     str = re.sub("[^0-9]", "", str)
     # if length of ssn less than nine add zeroes to front of ssn until length is 9
     while len(str) < 9:
@@ -15,4 +18,4 @@ def cleanSSN( str ):
     print(result)
     return result;
 
-# test cleanSSN(str = '5wiohghj67890iugg')
+cleanSSN()
