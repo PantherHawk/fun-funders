@@ -1,11 +1,16 @@
 -- 1) For each funding, return the funding_id and the agreement date.
-SELECT funding_id, agreement_date
-FROM FUNDINGS;
+SELECT
+  funding_id, agreement_date
+FROM
+  FUNDINGS;
 
 -- 2) Show me all attorneys that do NOT have a phone_number
-SELECT *
-FROM ATTORNEYS
-WHERE phone_number IS NULL;
+SELECT
+  *
+FROM
+  ATTORNEYS
+WHERE
+  phone_number IS NULL;
 
 -- 3) What is the total amount advanced all time?
 SELECT
