@@ -9,7 +9,7 @@ def cleanSSN( str ):
     # if length of ssn greater than nine
     if len(str) > 9:
      # slice first nine numbers
-     str = str[:10]
+     str = str[:9]
     # reformat by taking slice of first three numbers (0, 3), slice of next two (3, 5), and the last four (5)
     print(f'{str[:3]}-{str[3:5]}-{str[5:]}')
     return;
