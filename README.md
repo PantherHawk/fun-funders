@@ -1,4 +1,5 @@
-# fun-funders (https://ppaas.herokuapp.com/partyparrot)
+# fun-funders ![Party Parrot](https://ppaas.herokuapp.com/partyparrot "Party Parrot")
+
 *This was work comleted for a technical assessment*
 ## What's in here?
 - A few SQL queries to get those lawyers paid!
