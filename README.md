@@ -7,7 +7,8 @@
 
 ### Requirements
 Python version 2.7.**
-*"How do I know if I have it?"*
+
+* *"How do I know if I have it?"*
 Run ```python --version ```
 
 ### Usage
